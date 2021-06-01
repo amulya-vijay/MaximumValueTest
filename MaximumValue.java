@@ -26,4 +26,16 @@ public Float getMaxFloat(Float f1,Float f2, Float f3) {
 		return maximum;		
 	}
 
+public String getMaxString(String s1,String s2, String s3) {
+	
+	String maximum = s1;
+	if(s2.compareTo(maximum)>0) {
+		maximum = s2;
+	}
+	if(s3.compareTo(maximum)>0) {
+		maximum = s3;
+	}
+	return maximum;		
+}
+
 }
