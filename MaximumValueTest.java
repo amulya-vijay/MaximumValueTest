@@ -52,7 +52,7 @@ public static Collection imputValues() {
 	@Test
 	public void Integertest1() {
 		
-		Integer maxValue = mv.getMaxInteger(firstValue,secondValue,thirdValue);
+		Integer maxValue = mv.getMaxValue(firstValue,secondValue,thirdValue);
 		Assert.assertEquals(firstValue, maxValue);
 		System.out.println("first integer test: "+maxValue);
 	}
@@ -60,14 +60,14 @@ public static Collection imputValues() {
 	@Test
 	public void Integertest2() {
 		
-		Integer maxValue = mv.getMaxInteger(firstValue,secondValue,thirdValue);
+		Integer maxValue = mv.getMaxValue(firstValue,secondValue,thirdValue);
 		Assert.assertEquals(secondValue, maxValue);
-		System.out.println("secoond integer test: "+maxValue);
+		System.out.println("second integer test: "+maxValue);
 	}
 	
 	@Test
 	public void Integertest3() {
-		Integer maxValue = mv.getMaxInteger(firstValue,secondValue,thirdValue);
+		Integer maxValue = mv.getMaxValue(firstValue,secondValue,thirdValue);
 		Assert.assertEquals(thirdValue, maxValue);
 		System.out.println("third integer test: "+maxValue);
 	}
@@ -75,15 +75,15 @@ public static Collection imputValues() {
 	@Test
 	public void Floattest1() {
 		
-		Float maxValue = mv.getMaxFloat(val1,val2,val3);
+		Float maxValue = mv.getMaxValue(val1,val2,val3);
 		Assert.assertEquals(val1, maxValue);
 		System.out.println("first float test: "+maxValue);
 	}
-	
+
 	@Test
 	public void Floattest2() {
 		
-		Float maxValue = mv.getMaxFloat(val1,val2,val3);
+		Float maxValue = mv.getMaxValue(val1,val2,val3);
 		Assert.assertEquals(val2, maxValue);
 		System.out.println("Second float test: "+maxValue);
 	}
@@ -91,7 +91,7 @@ public static Collection imputValues() {
 	@Test
 	public void Floattest3() {
 		
-		Float maxValue = mv.getMaxFloat(val1,val2,val3);
+		Float maxValue = mv.getMaxValue(val1,val2,val3);
 		Assert.assertEquals(val3, maxValue);
 		System.out.println("Third float test: "+maxValue);
 	}
@@ -99,7 +99,7 @@ public static Collection imputValues() {
 	@Test
 	public void StringTest1() {
 
-		String maxValue = mv.getMaxString(string1,string2,string3);
+		String maxValue = mv.getMaxValue(string1,string2,string3);
 		Assert.assertEquals(string1, maxValue);
 		System.out.println("First String Test: "+maxValue);
 	}
@@ -107,7 +107,7 @@ public static Collection imputValues() {
 	@Test
 	public void StringTest2() {
 
-		String maxValue = mv.getMaxString(string1,string2,string3);
+		String maxValue = mv.getMaxValue(string1,string2,string3);
 		Assert.assertEquals(string2, maxValue);
 		System.out.println("Second String Test: "+maxValue);
 	}
@@ -115,9 +115,11 @@ public static Collection imputValues() {
 	@Test
 	public void StringTest3() {
 
-		String maxValue = mv.getMaxString(string1,string2,string3);
+		String maxValue = mv.getMaxValue(string1,string2,string3);
 		Assert.assertEquals(string3, maxValue);
 		System.out.println("Third String Test: "+maxValue);
 	}
+	
+	
 
 }

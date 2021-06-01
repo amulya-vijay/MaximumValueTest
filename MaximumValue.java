@@ -2,9 +2,10 @@ package com.maxValue;
 
 public class MaximumValue{
 	
-	public Integer getMaxInteger(Integer a,Integer b, Integer c) {
+	//Generic method takes all three types
+	public <data extends Comparable<data>> data getMaxValue(data a,data b, data c) {
 		
-		Integer maximum = a;
+		data maximum = a;
 		if(b.compareTo(maximum)>0) {
 			maximum = b;
 		}
@@ -14,7 +15,7 @@ public class MaximumValue{
 		return maximum;		
 	}
 	
-public Float getMaxFloat(Float f1,Float f2, Float f3) {
+/*public Float getMaxFloat(Float f1,Float f2, Float f3) {
 		
 		Float maximum = f1;
 		if(f2.compareTo(maximum)>0) {
@@ -26,9 +27,9 @@ public Float getMaxFloat(Float f1,Float f2, Float f3) {
 		return maximum;		
 	}
 
-public String getMaxString(String s1,String s2, String s3) {
+public static <data> data getMaxString(data s1,data s2, data s3) {
 	
-	String maximum = s1;
+	data maximum = s1;
 	if(s2.compareTo(maximum)>0) {
 		maximum = s2;
 	}
@@ -36,6 +37,6 @@ public String getMaxString(String s1,String s2, String s3) {
 		maximum = s3;
 	}
 	return maximum;		
-}
+}*/
 
 }
