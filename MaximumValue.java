@@ -22,11 +22,15 @@ public class MaximumValue<R extends Comparable<R>>{
 		if(c.compareTo(maximum)>0) {
 			maximum = c;
 		}
-		
+		printMax(a,b,c,maximum);
 		return maximum;		
 		
 	}
 	
+	public void printMax(R x,R y,R z,R max) {
+		
+		System.out.println("Maximum value in ["+a+","+b+","+c+"] : "+max);
+	}
 
 /*public Float getMaxFloat(Float f1,Float f2, Float f3) {
 		
