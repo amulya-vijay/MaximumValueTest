@@ -19,26 +19,34 @@ public class MaximumValueTest {
 	Float val1;
 	Float val2;
 	Float val3;
+	String string1;
+	String string2;
+	String string3;
 	
 	MaximumValue mv;
 	@Before
 	public void initialize() {
 		mv = new MaximumValue();
 	}
-	public MaximumValueTest(Integer i1, Integer i2,Integer i3, Float f1, Float f2, Float f3) {
+	public MaximumValueTest(Integer i1, Integer i2,Integer i3, Float f1, Float f2, Float f3,String s1,String s2,String s3) {
 		this.firstValue = i1;
 		this.secondValue = i2;
 		this.thirdValue = i3;
 		this.val1 = f1;
 		this.val2 = f2;
 		this.val3 = f3;
+		this.string1 = s1;
+		this.string2 = s2;
+		this.string3 = s3;
 		
 	}
 	
 	@Parameterized.Parameters
 public static Collection imputValues() {
 		
-		return  Arrays.asList(new Object[][] {{158,56,98,1.2f,1.1f,0.9f},{45,999,12,1.2f,10.0f,1.5f},{1,2,4,1.5f,1.2f,100.0f}});
+		return  Arrays.asList(new Object[][] {{158,56,98,1.2f,1.1f,0.9f,"peach","apple","kiwi"}
+											,{45,999,12,1.2f,10.0f,1.5f,"apple","strawberry","plum"}
+											,{1,2,4,1.5f,1.2f,100.0f,"banana","melon","pineapple"}});
 	}
 
 	@Test
@@ -88,5 +96,28 @@ public static Collection imputValues() {
 		System.out.println("Third float test: "+maxValue);
 	}
 	
+	@Test
+	public void StringTest1() {
+
+		String maxValue = mv.getMaxString(string1,string2,string3);
+		Assert.assertEquals(string1, maxValue);
+		System.out.println("First String Test: "+maxValue);
+	}
+	
+	@Test
+	public void StringTest2() {
+
+		String maxValue = mv.getMaxString(string1,string2,string3);
+		Assert.assertEquals(string2, maxValue);
+		System.out.println("Second String Test: "+maxValue);
+	}
+	
+	@Test
+	public void StringTest3() {
+
+		String maxValue = mv.getMaxString(string1,string2,string3);
+		Assert.assertEquals(string3, maxValue);
+		System.out.println("Third String Test: "+maxValue);
+	}
 
 }
