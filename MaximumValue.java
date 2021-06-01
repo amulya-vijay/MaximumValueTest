@@ -1,6 +1,6 @@
 package com.maxValue;
 
-public class MaximumValue {
+public class MaximumValue{
 	
 	public Integer getMaxValue(Integer a,Integer b, Integer c) {
 		
@@ -12,14 +12,6 @@ public class MaximumValue {
 			maximum = c;
 		}
 		return maximum;
-	/*	if(a.compareTo(b)>0 && a.compareTo(c)>0) {
-			return a;
-		}
-		if(b.compareTo(a)>0 && b.compareTo(c)>0) {
-			return b;
-		}else {
-			return c;
-		} */
 		
 	}
 
