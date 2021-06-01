@@ -37,6 +37,7 @@ public class MaximumValueTest {
 		
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Parameterized.Parameters
 public static Collection imputValues() {
 		
@@ -47,29 +48,27 @@ public static Collection imputValues() {
 
 	@Test
 	public void Integertest1() {
-
 		Assert.assertEquals(firstValue,new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue() );
-		System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
+	//  System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
 	}
 	
 	@Test
 	public void Integertest2() {
-		
 			Assert.assertEquals(secondValue,new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue() );
-			System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
+		//	System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
 	
 	}
 	
 	@Test
 	public void Integertest3() {
 			Assert.assertEquals(thirdValue,new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue() );
-			System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
+		//	System.out.println(new MaximumValue<Integer>(firstValue,secondValue,thirdValue).getMaxValue());
 	}
 	
 	@Test
 	public void Floattest1() {
 			Assert.assertEquals(val1,new MaximumValue<Float>(val1,val2,val3).getMaxValue() );
-			System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
+		//	System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
 	
 	}
 
@@ -77,39 +76,35 @@ public static Collection imputValues() {
 	public void Floattest2() {
 		
 			Assert.assertEquals(val2,new MaximumValue<Float>(val1,val2,val3).getMaxValue() );
-			System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
+		//	System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
 	
 	}
 	
 	@Test
 	public void Floattest3() {
 		Assert.assertEquals(val3,new MaximumValue<Float>(val1,val2,val3).getMaxValue() );
-		System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
+	//	System.out.println(new MaximumValue<Float>(val1,val2,val3).getMaxValue());
 	
 	}
 	
 	@Test
 	public void StringTest1() {
 		Assert.assertEquals(string1,new MaximumValue<String>(string1,string2,string3).getMaxValue() );
-		System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
+	//	System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
 	
 	}
 	
 	@Test
 	public void StringTest2() {
-
 		Assert.assertEquals(string2,new MaximumValue<String>(string1,string2,string3).getMaxValue() );
-		System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
+	//	System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
 	
 	}
 	
 	@Test
 	public void StringTest3() {
 		Assert.assertEquals(string3,new MaximumValue<String>(string1,string2,string3).getMaxValue() );
-		System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
+	//	System.out.println(new MaximumValue<String>(string1,string2,string3).getMaxValue() );
 	
 	}
-	
-	
-
 }
