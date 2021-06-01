@@ -1,20 +1,33 @@
 package com.maxValue;
 
-public class MaximumValue{
+public class MaximumValue<R extends Comparable<R>>{
+	
+	 R a;
+	 R b;
+	 R c;
+
+	public MaximumValue(R a,R b,R c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 	
 	//Generic method takes all three types
-	public <data extends Comparable<data>> data getMaxValue(data a,data b, data c) {
+	public R getMaxValue() {
 		
-		data maximum = a;
+		R maximum = a;
 		if(b.compareTo(maximum)>0) {
 			maximum = b;
 		}
 		if(c.compareTo(maximum)>0) {
 			maximum = c;
 		}
+		
 		return maximum;		
+		
 	}
 	
+
 /*public Float getMaxFloat(Float f1,Float f2, Float f3) {
 		
 		Float maximum = f1;
